@@ -72,3 +72,40 @@ function suiteFibonacci(iteration) {
         console.log(suiteFibonacciListe[i]);
     }
 }
+
+function getPGCD(nombre1, nombre2) {
+    a = Math.abs(nombre1);
+    b = Math.abs(nombre2);
+    if (b > a) {
+        var tmp = a;
+        a = b;
+        b = tmp;
+    }
+    while (true) {
+        if (b == 0) return a;
+        a %= b;
+        if (a == 0) return b;
+        b %= a;
+    }
+}
+
+function getPPCM(nombre1, nombre2) {
+    a = Math.abs(nombre1);
+    b = Math.abs(nombre2);
+    if (b > a) {
+        var tmp = a;
+        a = b;
+        b = tmp;
+    }
+    while (true) {
+        if (b == 0) return a;
+        a %= b;
+        if (a == 0) return b;
+        b %= a;
+    }
+}
+
+function getPGCDAndPPCM(nombre1, nombre2) {
+    console.log("PGCD = " + getPGCD(nombre1, nombre2));
+    console.log("PPCM = " + getPPCM(nombre1, nombre2));
+}

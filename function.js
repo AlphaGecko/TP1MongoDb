@@ -49,3 +49,26 @@ function bruteForceCesar(cesarString) {
 function calculVolumeCone(base, hauteur) {
     console.log(1 / 3 * base * hauteur);
 }
+
+function suiteFibonacci(iteration) {
+
+    var suiteFibonacciListe = [];
+    var nombreMoins2 = 0;
+    var nombreMoins1 = 0;
+    var nombre = 0;
+
+    for (let i = 0; i <= iteration; i++) {
+        if (i == 0) {
+            suiteFibonacciListe[i] = nombre;
+            nombreMoins1 = 1;
+            nombre++;
+        } else {
+            nombre = nombreMoins1 + nombreMoins2;
+            nombreMoins2 = nombreMoins1;
+            nombreMoins1 = nombre;
+            suiteFibonacciListe[i] = nombre;
+        }
+
+        console.log(suiteFibonacciListe[i]);
+    }
+}

@@ -45,3 +45,7 @@ function bruteForceCesar(cesarString) {
 
     console.log(listeReponsesPossible.toString());
 }
+
+function calculVolumeCone(base, hauteur) {
+    console.log(1 / 3 * base * hauteur);
+}
